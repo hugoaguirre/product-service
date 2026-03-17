@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package product.v1;
+option go_package = "github.com/hugoaguirre/product-service/pkg/productapi";
+
+message ProductRequest {
+  string product_id = 1;
+}
+
+message ProductResponse {
+  string name = 1;
+  int64 price_in_cents = 2;
+  int32 stock = 3;
+}
+
+service ProductService {
+  rpc GetProduct(ProductRequest) returns (ProductResponse);
+}
