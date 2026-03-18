@@ -2,6 +2,8 @@
 
 A small gRPC service written in Go that follows Hexagonal Architecture
 
+---
+
 ## Quick overview
 
 This service acts as a Catalog service that only manages
@@ -26,13 +28,13 @@ at high speed.
 
 Can be thought as the gateway of our system. This could be used by
 the Frontend (web/mobile) or Admin Tools to browse or manage
-the inventory respectively
+the inventory respectively.
 
 #### Communication flow
 
-Web browser -> Product Service (REST) -- browsing the catalog
-Web browser -> Order Service (REST) -- placing an order
-Order Service -> Product Service (gRPC) -- internal validation during checkout
+- Web browser -> Product Service (`REST`) -- browsing the catalog
+- Web browser -> Order Service (`REST`) -- placing an order
+- Order Service -> Product Service (`gRPC`) -- internal validation during checkout
 
 ## Folder structure
 
