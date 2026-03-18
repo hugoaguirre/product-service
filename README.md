@@ -14,9 +14,9 @@ using the information managed by this service.
 
 This service should not initiate workflows in other services.
 
-### Adapters
+## Adapters
 
-#### gRPC adapter
+### gRPC adapter
 
 This adapter is meant to be used by other internal services, such as
 an `Orders` service.
@@ -24,13 +24,13 @@ an `Orders` service.
 gRPC excels in having internal service communication language-agnostic
 at high speed.
 
-#### REST adapter
+### REST adapter
 
 Can be thought as the gateway of our system. This could be used by
 the Frontend (web/mobile) or Admin Tools to browse or manage
 the inventory respectively.
 
-#### Communication flow
+### Communication flow
 
 - Web browser -> Product Service (`REST`) -- browsing the catalog
 - Web browser -> Order Service (`REST`) -- placing an order
